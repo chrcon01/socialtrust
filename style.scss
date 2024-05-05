@@ -8,14 +8,148 @@ body{
     background-color: #001063;
 }
 
+/* header */
+.header_con {
+    display: flex;
+    align-items:center; 
+    background-color: #F8AC39;
+    width: 100%;
+    height: auto;
+    }
+
+    .logo {
+    margin: 2%;
+        }
+
+        .logo img {
+            width: 10rem;
+            height: 10rem;
+             }
+
+        .nav_con {
+            display: flex; 
+            flex-direction: row;
+            margin-left: 13%;
+             }
+
+        .nav_text {
+            color: #fff;
+            font-family: Antonio;
+            font-size: 4rem;
+            text-decoration: none; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+            margin-right: 30%;
+            white-space: nowrap;
+             }
+
+               /* overskrift */
+
+.overskrift {
+    display: flex;
+    align-items:center; 
+    flex-direction: column;
+}
+
+.overskrift h1 {
+        color: #FFF;
+        text-align: center;
+        font-family: "JetBrains Mono";
+        font-size: 6rem;
+        margin-top: 10%;
+        white-space: nowrap;
+}
+
+.overskrift p {
+color: #FFF;
+font-family: Basic;
+font-size: 2.5rem;
+}
+
+.brev {
+display: flex;
+justify-content: center;
+}
+
+.brev img { 
+    width: 31.9575rem;
+    height: 32rem;
+    }
+
+    /* intro */
+    .intro {
+       margin-left: 22%;
+        }
+
+        .intro h2 {
+            color: #F8AC39;
+            font-family: Antonio;
+            font-size: 3rem;
+            margin-bottom: 3%;
+             }
+
+             .intro p {
+                color: #FFF;
+                font-family: Antonio;
+                font-size: 2rem;
+                 }
+
+
+/* quiz */
 .quiz_con {
 background: linear-gradient(180deg, #F8AC39 0%, #FFF 100%);
-min-width: 50.25rem;
+width: 50.25rem;
 min-height: 62.25rem;
 margin: 100px auto;
 border-radius: 70px;
 padding: 5%;
 }
+
+.progress-con {
+    width: 100%; 
+    background-color: #ffd941e0; 
+    border-radius: 10px; 
+    margin: 2%;
+    position: relative; 
+}
+
+#progress-bar {
+    height: 1.25rem; 
+    background-color: #ff9100; 
+    width: 0%; 
+    border-radius: 8px; 
+}
+
+.progress-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20%;
+    width: 0.125rem;
+    background: #fff; 
+}
+
+.progress-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40%;
+    width: 2px;
+    background: #fff; 
+}
+
+.progress-container::after, .progress-container::before, .progress-container::after:nth-of-type(2), .progress-container::after:nth-of-type(3) {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    width: 0.125rem; 
+}
+
+.progress-container::after:nth-of-type(2) { left: 60%; }
+.progress-container::after:nth-of-type(3) { left: 80%; }
 
 .quiz_con h1 {
 color: #000;
@@ -115,6 +249,87 @@ display: none;
        .forkert {
         background-color: red;
            }
+
+/* footer */
+        .footer-con {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            background-color: #F8AC39; 
+            color: black;
+            padding: 40px;
+        }
+        
+        .kontakt p, .kontakt h3 {
+            font-family: "Inter", sans-serif;
+            margin-left: 20%;
+        }
+
+        .kontakt h3 {
+            font-size: 1.5625rem;
+            margin-bottom: 5%;
+        }
+
+        .kontakt p {
+            font-size: 1.25rem;
+        }
+        
+        .SM {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center;
+            font-family: "Inter", sans-serif;
+            margin-left: 20%;
+        }
+
+        .SM h3 {
+            font-size: 1.5625rem;
+            margin-bottom: 5%;
+        }
+
+        .social-links img {
+            width: 100%;
+            height: auto;
+            align-items: center;
+        }
+
+        
+        .besked {
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-start; 
+            font-family: "Inter", sans-serif;
+            margin-left: 20%;
+            margin-right: 5%;
+
+        }
+
+        .besked h3 {
+            font-size: 1.5625rem;
+            margin-bottom: 5%;
+        }
+        
+        .besked input, .besked textarea, .besked button {
+            margin-top: 10px;
+            padding: 8px;
+            width: 100%;
+        }
+        
+        .besked button {
+            font-family: "Inter", sans-serif;
+            background-color: black;
+            color: #F8AC39;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .besked textarea {
+            font-family: "Inter", sans-serif;
+            height: 60px;
+            resize: none; 
+        }
+          
 
 
 

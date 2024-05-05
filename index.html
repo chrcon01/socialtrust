@@ -5,13 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Basic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Basic&display=swap" 
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
+    <header class="header_con">
+        <figure class="logo">
+            <img src="Social Trust_Sem2_opg2.png" alt="Logo">
+          </figure>
 
+          <nav class="nav_con">
+            <a href="#Phishing" class="nav_text">Phishing 101</a>
+            <a href="#Support" class="nav_text">Support</a>
+          </nav>
+    </header>
+
+    <!-- Overskrift -->
+    <section class="overskrift">
+    <h1>Social Trust</h1>
+    <p>I en digital verden</p>
+    </section>
+
+    <figure class="brev">
+        <img src="Brev.png" alt="Åbent brev">
+    </figure>
+
+    <!-- Intro -->
+    <section class="intro">
+    <h2>Phishing</h2>
+    <p>
+        Velkommen til vores guide om <br> 
+        internetsikkerhed! Her vil du blive klædt på til 
+        at identificere <br>og håndtere phishing. Inden 
+        du dykker ned i dybderne af phishing, 
+        <br> har vi forberedt en lille quiz til dig!
+        <br>
+        <br>
+        Denne test vil vise, om du allerede har øje for 
+        de tricks som <br> svindlerne har gemt i ærmet. Er 
+        du klar til at teste din viden? 
+        <br>Lad os se hvor 
+        forberedt du er!
+    </p>
+    </section>
+
+     <!-- Quiz -->
     <div class="quiz_con">
+        <div class="progress-con">
+            <div id="progress-bar"></div>
+        </div>
+
         <h1>Test din viden og bliv klogere på <br>
-            Social Engineeing</h1>
+            Phishing</h1>
 
             <div class="quiz">
             <div class="question">
@@ -33,6 +82,42 @@
             <button id="btn_retry" class="btn">Prøv igen</button>
         </div>
     </div>
+
+  <!-- Pil op -->
+   <figure class="pil_con">
+    <img src="Pil op.png" alt="Pil op" class="pil">
+   </figure>
+
+      <!-- Footer -->
+            <footer class="footer-con"> 
+                   <div class="kontakt">
+                       <h3>Kontakt</h3>
+                       <p>SOCIAL TRUST</p>
+                       <p>Havneparken 1,</p>
+                       <p>6000 Kolding, Danmark</p>
+                       <br>
+                       <p>Mobil: 12 34 56 78</p>
+                       <p>Email: socialtrust@gmail.com</p>
+                   </div>
+
+                   <div class="SM">
+                    <h3>Connect</h3>
+                    <img src="SM icons 1.png" alt="Facebook og instagram ikoner">
+                </div>
+
+                <div class="besked">
+                    <h3>Send besked</h3>
+                    <form action="submit.php" method="POST">
+                        <input type="text" name="name" placeholder="Navn" required>
+                        <input type="email" name="email" placeholder="Email*" required>
+                        <textarea name="message" placeholder="Din besked" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </footer>
+
+
+
     <script src="script.js"></script>
 </body>
 </html>

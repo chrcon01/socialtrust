@@ -64,6 +64,15 @@ function startQuiz() {
     showQuestion();
 }
 
+function updateProgressBar() {
+    const totalSections = 5;
+    const questionsPerSection = Math.ceil(questions.length / totalSections);
+    const completedSections = Math.floor((currentQuestionIndex + 1) / questionsPerSection);
+    const progressWidth = (completedSections / totalSections) * 100;
+    console.log(`Progress Width: ${progressWidth}%`); 
+    document.getElementById("progress-bar").style.width = progressWidth + "%";
+}
+
 function showQuestion() {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
@@ -77,9 +86,13 @@ function showQuestion() {
         if (answer.isCorrect) {
             button.dataset.correct = answer.isCorrect;
         }
-        button.addEventListener('click', selectAnswer);
+        button.addEventListener('click', function(e)  {
+            selectAnswer(e);
+            updateProgressBar(); 
+        });   
         answerButtons.appendChild(button);
     });
+    updateProgressBar();
 }
 
 function resetState() {
@@ -107,21 +120,22 @@ function selectAnswer(e) {
 
     function showScore(){
         resetState();
-        questionElement.innerHTML = `Din score er ${score} ud af ${questions.length}. (br)
-        Tak, fordi du tog vores quiz! Forhåbentlig har du fået en lille fornemmelse af hvad Social Engineering er, og hvordan du kan beskytte dig selv. Husk altid at tænke dig om.`;
+        questionElement.innerHTML = `Din score er ${score} ud af ${questions.length}. 
+        <br>
+        <br>
+        Tak, fordi du tog vores quiz! Forhåbentlig har du fået en lille fornemmelse af hvad Phishing er, og hvordan du kan beskytte dig selv. Husk altid at tænke dig om.`;
         nextButton.innerHTML = "Prøv igen";
-        nextButton.style.display =(block);
+        nextButton.style.display = 'block';
         nextButton.removeEventListener('click', handleNextButton);
         nextButton.addEventListener('click', startQuiz);
     }
     
-    function handleNextButton(){
-        currentQuestionIndex++;
-        if(currentQuestionIndex < questions.length -1){
-            currentQuestionIndex++;
-            showQuestion();
-        }else{
-            showScore();      
+    function handleNextButton() {
+        currentQuestionIndex++;  
+        if (currentQuestionIndex < questions.length) {
+            showQuestion();  
+        } else {
+            showScore();    
         }
     }
 
