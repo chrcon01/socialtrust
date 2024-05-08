@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Basic&display=swap" 
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header_con">
+        <figure class="logo">
+            <img src="Social Trust_Sem2_opg2.png" alt="Logo">
+          </figure>
+
+          <nav class="nav_con">
+            <a href="index.html" class="nav_text">Forside</a>
+          </nav>
+    </header>
+
+        <!-- 101 info -->
+        <section class="phishing">
+            <h2><span id="o">Phishing</span> <span id="r">101</span></h2>
+            <p>
+                På denne side bliver du en haj til at identificere og håndtere phishing. 
+            </p>
+            </section>
+
+            <!-- infografik -->
+        <figure class="infografik">
+    <img src="Infografik.png" alt="Phishing infografik" id="infog">
+        </figure>
+
+         <!-- Branching scenario -->
+         <section>
+            <figure class="bs_con" id="scene1">
+                <img src="BS_quiz.png" alt="Branching scenario på computer" class="bs">
+                <button class="knap">START</button>
+            </figure>
+        
+            <figure class="bs_con" id="scene2">
+                <img src="Side 2_bs.png" alt="Branching scenario på computer" class="bs1">
+                <button class="valg1"><span id="rod">Valg A:</span> <span id="sort">Klik på linket og følg instruktionerne</span></button>
+                <button class="valg"><span id="rod">Valg B:</span> <span id="sort"> Undersøg e-mailens legitimitet ved at kontakte IT-afdelingen direkte</span></button>
+            </figure>
+        
+            <figure class="bs_con" id="scene3">
+                <img src="Resultat A.png" alt="Resultat A" class="bs2">
+                <button id="restartButtonA" class="knap2">Prøv igen</button>
+            </figure>
+
+         <!-- Footer -->
+         <footer class="footer-con"> 
+            <div class="kontakt">
+                <h3>Kontakt</h3>
+                <p>SOCIAL TRUST</p>
+                <p>Havneparken 1,</p>
+                <p>6000 Kolding, Danmark</p>
+                <br>
+                <p>Mobil: 12 34 56 78</p>
+                <p>Email: socialtrust@gmail.com</p>
+            </div>
+
+            <div class="SM">
+             <h3>Connect</h3>
+             <img src="SM icons 1.png" alt="Facebook og instagram ikoner">
+         </div>
+
+         <div class="besked">
+             <h3>Send besked</h3>
+             <form action="submit.php" method="POST">
+                 <input type="text" name="name" placeholder="Navn" required>
+                 <input type="email" name="email" placeholder="Email*" required>
+                 <textarea name="message" placeholder="Din besked" required></textarea>
+                 <button type="submit">Send</button>
+             </form>
+         </div>
+
+         <figure class="pil_con">
+             <a href="phishing.html" onclick="scrollToTop();">
+                 <img src="Pil op.png" alt="Pil op" class="pil">
+             </a>
+         </figure>
+     </footer>
+
+        <script src="script.js"></script>
+    </body>
+    </html>
+           
+        

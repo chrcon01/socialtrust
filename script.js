@@ -139,4 +139,73 @@ function selectAnswer(e) {
         }
     }
 
-document.addEventListener('DOMContentLoaded', startQuiz);
+    document.addEventListener('DOMContentLoaded', startQuiz);
+
+       // branching scenario (jeg har brugt chatgpt til hjælp, når jeg var i tvivl)
+
+var currentScene = 1;
+
+document.querySelectorAll('.knap').forEach(function(button) {
+    button.addEventListener('click', function() {
+        nextScene();
+    });
+});
+
+document.querySelectorAll('.valg1').forEach(function(button) {
+    button.addEventListener('click', function() {
+        selectOption('A');
+    });
+});
+
+document.querySelectorAll('.valg').forEach(function(button) {
+    button.addEventListener('click', function() {
+        selectOption('B');
+    });
+});
+
+function nextScene() {
+    document.getElementById('scene' + currentScene).style.display = 'none';
+    currentScene++;
+    document.getElementById('scene' + currentScene).style.display = 'block';
+}
+
+function selectOption(option) {
+    for (let i = 1; i <= 4; i++) {
+        document.getElementById('scene' + i).style.display = 'none';
+    }
+    if (option === 'A') {
+        currentScene = 3; 
+    } else if (option === 'B') {
+        currentScene = 4; 
+    }
+    document.getElementById('scene' + (currentScene - 1)).style.display = 'none';
+    document.getElementById('scene' + currentScene).style.display = 'block';
+}
+
+const restartButtonA = document.getElementById('restartButtonA');
+const restartButtonB = document.getElementById('restartButtonB');
+
+restartButtonA.addEventListener('click', restartScene);
+restartButtonB.addEventListener('click', restartScene);
+
+function restartScene() {
+    console.log('Restart button clicked');
+
+    currentScene = 1;
+
+    document.querySelectorAll('.bs_con').forEach(function(scene) {
+        scene.style.display = 'none';
+    });
+    document.getElementById('scene1').style.display = 'block';
+}
+
+    // pil op 
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+

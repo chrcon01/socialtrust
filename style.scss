@@ -4,286 +4,269 @@
     box-sizing: border-box;
 }
 
-body{
+body { 
     background-color: #001063;
 }
 
+/* variables*/
+
+$primary-color: #F8AC39;
+$secondary-color: #FFF;
+$accent-color: #DE3641;
+$quiz-color: #ff9100; 
+$bar-color: #ffd941e0; 
+$sort-color: #000;
+$gron-color: green;
+
+$font-basic: "Basic", sans-serif;
+$font-antonio: "Antonio", sans-serif;
+$font-jetbrains-mono: "JetBrains Mono", monospace;
+$font-inter: "Inter", sans-serif;
+
+
 /* header */
-.header_con {
-    display: flex;
-    align-items:center; 
-    background-color: #F8AC39;
-    width: 100%;
-    height: auto;
-    }
-
-    .logo {
-    margin: 2%;
+    .header_con {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: $primary-color;
+        width: 100%;
+        height: auto;
+        padding: 2%;
+    
+        .logo {
+            margin-bottom: 2%;
+    
+            img {
+                width: 100px;
+                height: 100px;
+            }
         }
-
-        .logo img {
-            width: 10rem;
-            height: 10rem;
-             }
-
-        .nav_con {
-            display: flex; 
-            flex-direction: row;
-            margin-left: 13%;
-             }
-
+    
         .nav_text {
-            color: #fff;
-            font-family: Antonio;
-            font-size: 4rem;
-            text-decoration: none; 
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-            margin-right: 30%;
-            white-space: nowrap;
-             }
-
-               /* overskrift */
-
-.overskrift {
-    display: flex;
-    align-items:center; 
-    flex-direction: column;
-}
-
-.overskrift h1 {
-        color: #FFF;
-        text-align: center;
-        font-family: "JetBrains Mono";
-        font-size: 6rem;
-        margin-top: 10%;
-        white-space: nowrap;
-}
-
-.overskrift p {
-color: #FFF;
-font-family: Basic;
-font-size: 2.5rem;
-}
-
-.brev {
-display: flex;
-justify-content: center;
-}
-
-.brev img { 
-    width: 31.9575rem;
-    height: 32rem;
+            color: $secondary-color;
+            font-family: $font-antonio;
+            font-size: 2rem;
+            text-decoration: none;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
     }
+
+        /* overskrift */
+               .overskrift {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            
+                h1 {
+                    color: $secondary-color;
+                    text-align: center;
+                    font-family: $font-jetbrains-mono;
+                    font-size: 5rem;
+                    margin-top: 3%;
+                    white-space: nowrap;
+                }
+            
+                p {
+                    color: $secondary-color;
+                    font-family: $font-basic;
+                    font-size: 2.5rem;
+                }
+            }
+            
+            .brev {
+                display: flex;
+                justify-content: center;
+            
+                img { 
+                    width: 23rem;
+                    height: auto;
+                }
+            }
 
     /* intro */
     .intro {
-       margin-left: 22%;
-        }
-
-        .intro h2 {
-            color: #F8AC39;
-            font-family: Antonio;
+        margin-right: 10%;
+        margin-left: 10%;
+    
+        h2 {
+            color: $primary-color;
+            font-family: $font-antonio;
             font-size: 3rem;
             margin-bottom: 3%;
-             }
-
-             .intro p {
-                color: #FFF;
-                font-family: Antonio;
-                font-size: 2rem;
-                 }
+        }
+    
+        p {
+            color: $secondary-color;
+            font-family: $font-antonio;
+            font-size: 2rem;
+        }
+    }
 
 
 /* quiz */
 .quiz_con {
-background: linear-gradient(180deg, #F8AC39 0%, #FFF 100%);
-width: 50.25rem;
-min-height: 62.25rem;
-margin: 100px auto;
-border-radius: 70px;
-padding: 5%;
-}
-
-.progress-con {
-    width: 100%; 
-    background-color: #ffd941e0; 
-    border-radius: 10px; 
-    margin: 2%;
-    position: relative; 
-}
-
-#progress-bar {
-    height: 1.25rem; 
-    background-color: #ff9100; 
-    width: 0%; 
-    border-radius: 8px; 
-}
-
-.progress-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 20%;
-    width: 0.125rem;
-    background: #fff; 
-}
-
-.progress-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 40%;
-    width: 2px;
-    background: #fff; 
-}
-
-.progress-container::after, .progress-container::before, .progress-container::after:nth-of-type(2), .progress-container::after:nth-of-type(3) {
-    position: absolute;
-    content: '';
-    top: 0;
-    bottom: 0;
-    background: #fff;
-    width: 0.125rem; 
-}
-
-.progress-container::after:nth-of-type(2) { left: 60%; }
-.progress-container::after:nth-of-type(3) { left: 80%; }
-
-.quiz_con h1 {
-color: #000;
-text-align: center;
-font-family: Basic;
-font-size: 40px;
-padding-bottom: 5%;
-}
-
-.quiz {
-    padding: 8%;
+    background: linear-gradient(180deg, $primary-color 0%, $secondary-color 100%);
+    width: 40.25rem;
+    height: auto;
+    margin: 100px auto;
     border-radius: 70px;
-    background: #FFF;
-    display: flex;
-    flex-direction: column;
-}
+    padding: 5%;
 
-.question{
-    color: #000;
-    text-align: center;
-    font-family: Basic;
-    font-size: 35px;
-    border: 1px solid #F8AC39;
-    box-shadow: 0px 4px 4px 0px #F8AC39;
-    border-radius: 70px;
-    background-color: #FFF;
-    margin-bottom: 4%;
-    padding: 2%;
-}
+    .progress-con {
+        width: 100%; 
+        background-color: $bar-color; 
+        border-radius: 10px; 
+        margin: 2%;
+        position: relative; 
 
-.question h2 {
-    color: #000;
-    text-align: center;
-    font-family: Basic;
-    font-size: 35px;
-}
+        #progress-bar {
+            height: 1.25rem; 
+            background-color: $quiz-color; 
+            width: 0%; 
+            border-radius: 8px; 
+        }
 
-#answer-button {
-    border-radius: 70px;
-    background-color: #FFF;
-    padding: 2%;
-    width: 100%;
-}
+        .progress-container::after, .progress-container::before, .progress-container::after:nth-of-type(2), .progress-container::after:nth-of-type(3) {
+            position: absolute;
+            content: '';
+            top: 0;
+            bottom: 0;
+            background: $secondary-color;
+            width: 0.125rem; 
+        }
 
-.btn {
-    color: #000;
-    text-align: center;
-    font-family: Basic;
-    font-size: 35px;
-    cursor: pointer;
-    transition: all 0.3s;
-    border-radius: 70px;
-    background-color: #FFF;
-    padding: 2%;
-    width: 100%;
-    margin-bottom: 4%;
-    border: 1px solid #F8AC39;
-    box-shadow: 0px 4px 4px 0px #F8AC39;
-}
-
-#btn_next {
-color: #000;
-text-align: center;
-font-family: Basic;
-font-size: 35px;
-border-radius: 70px;
-background-color: #FFF;
-padding: 2%;
-width: 50%;
-margin: 4%;
-margin-left: 25%;
-border: 1px solid #F8AC39;
-box-shadow: 0px 4px 4px 0px #F8AC39;
-cursor: pointer;
-display: none;
-}
-
-#btn_retry{
-    display:none;
-       }
-
-.btn:hover:not([disabled]){
- background-color: #F8AC39;
+        .progress-container::after { left: 20%; }
+        .progress-container::before { left: 40%; }
+        .progress-container::after:nth-of-type(2) { left: 60%; }
+        .progress-container::after:nth-of-type(3) { left: 80%; }
     }
-    .btn:disabled {
-        cursor: no-drop;
-           }
 
-    #btn_next:hover{
-        background-color: #F8AC39;
-           }
+    h1 {
+        color: $sort-color;
+        text-align: center;
+        font-family: $font-basic;
+        font-size: 1.8rem;
+        padding-bottom: 5%;
+    }
 
-.rigtig {
-    background-color: green;
-       }
+    .quiz {
+        padding: 8%;
+        border-radius: 70px;
+        background: $secondary-color;
+        display: flex;
+        flex-direction: column;
 
-       .forkert {
-        background-color: red;
-           }
+        .question {
+            color: $sort-color;
+            text-align: center;
+            font-family: $font-basic;
+            border: 1px solid $primary-color;
+            box-shadow: 0px 4px 4px 0px $primary-color;
+            border-radius: 70px;
+            background-color: $secondary-color;
+            margin-bottom: 4%;
+            padding: 2%;
+
+            h2 {
+                color: $sort-color;
+                text-align: center;
+                font-family: $font-basic;
+                font-size: 1.5rem;
+            }
+        }
+
+        #answer-button {
+            border-radius: 70px;
+            background-color: $secondary-color;
+            padding: 2%;
+            width: 100%;
+
+            .btn {
+                color: $sort-color;
+                text-align: center;
+                font-family: $font-basic;
+                font-size: 1.2rem;
+                cursor: pointer;
+                transition: all 0.3s;
+                border-radius: 70px;
+                background-color: $secondary-color;
+                padding: 2%;
+                width: 100%;
+                margin-bottom: 4%;
+                border: 1px solid $primary-color;
+                box-shadow: 0px 4px 4px 0px $primary-color;
+
+                &:hover:not([disabled]) {
+                    background-color: $primary-color;
+                }
+
+                &:disabled {
+                    cursor: no-drop;
+                }
+            }
+        }
+    }
+
+    #btn_next {
+        color: $sort-color;
+        text-align: center;
+        font-family: $font-basic;
+        font-size: 1.2rem;
+        border-radius: 70px;
+        background-color: $secondary-color;
+        padding: 2%;
+        width: 50%;
+        margin: 4%;
+        margin-left: 25%;
+        border: 1px solid $primary-color;
+        box-shadow: 0px 4px 4px 0px $primary-color;
+        cursor: pointer;
+        display: none;
+
+        &:hover {
+            background-color: $primary-color;
+        }
+    }
+
+    #btn_retry {
+        display: none;
+    }
+}
 
 /* footer */
-        .footer-con {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            background-color: #F8AC39; 
-            color: black;
-            padding: 40px;
-        }
-        
-        .kontakt p, .kontakt h3 {
-            font-family: "Inter", sans-serif;
-            margin-left: 20%;
-        }
+.footer-con {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    background-color: $primary-color;
+    color: $sort-color;
+    padding: 60px;
 
-        .kontakt h3 {
+    .kontakt {
+        font-family: $font-inter;
+        margin-left: 4%;
+
+        h3 {
             font-size: 1.5625rem;
             margin-bottom: 5%;
         }
 
-        .kontakt p {
+        p {
             font-size: 1.25rem;
         }
-        
-        .SM {
-            display: flex;
-            flex-direction: column; 
-            align-items: center; 
-            text-align: center;
-            font-family: "Inter", sans-serif;
-            margin-left: 20%;
-        }
+    }
 
-        .SM h3 {
+    .SM {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-family: $font-inter;
+        margin-left: 20%;
+
+        h3 {
             font-size: 1.5625rem;
             margin-bottom: 5%;
         }
@@ -293,43 +276,473 @@ display: none;
             height: auto;
             align-items: center;
         }
+    }
 
-        
-        .besked {
-            display: flex;
-            flex-direction: column; 
-            align-items: flex-start; 
-            font-family: "Inter", sans-serif;
-            margin-left: 20%;
-            margin-right: 5%;
+    .besked {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: $font-inter;
+        margin-left: 20%;
+        margin-right: 5%;
 
-        }
-
-        .besked h3 {
+        h3 {
             font-size: 1.5625rem;
             margin-bottom: 5%;
         }
-        
-        .besked input, .besked textarea, .besked button {
+
+        input, textarea, button {
+            font-family: $font-inter;
             margin-top: 10px;
             padding: 8px;
             width: 100%;
         }
-        
-        .besked button {
-            font-family: "Inter", sans-serif;
-            background-color: black;
-            color: #F8AC39;
+
+        button {
+            background-color: $sort-color;
+            color: $primary-color;
             border: none;
             cursor: pointer;
         }
-        
-        .besked textarea {
-            font-family: "Inter", sans-serif;
+
+        textarea {
             height: 60px;
-            resize: none; 
+            resize: none;
+        }
+    }
+}
+
+        /* pil op */
+     .pil_con {
+        position: absolute; 
+        bottom: 100%; 
+        left: 90%; 
+        transform: translate(-50%, 50%);
+        
+            .pil {
+                cursor: pointer; 
+            }
         }
           
+///////////////////////* SIDE 2 *////////////////////////////////////
 
+.phishing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        margin-top: 3%;
+        font-family: $font-antonio;
+        font-size: 3rem;
+        margin-bottom: 5%;
+
+        #o {
+            color: $primary-color; 
+        }
+
+        #r {
+            color: $accent-color; 
+        }
+    }
+
+    p {
+        color: $secondary-color;
+        font-family: $font-antonio;
+        font-size: 2rem;
+    }
+}
+
+  /* infografik */
+
+  .infografik {
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #infog {
+        width: 39.5rem;
+    }
+}
+
+/* branching scenario */
+
+    .bs_con {
+    margin-top: 4%;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+        .bs {
+            width: 60rem;
+            position: relative;
+            z-index: 1;
+        }
+
+
+   .knap {
+            position: absolute;
+            top: 293%; 
+            left: 44%;
+            z-index: 2;
+            color: $sort-color;
+            text-align: center;
+            font-family: $font-antonio;
+            font-size: 1.875rem;
+            width: 11.5625rem;
+            height: 3.7rem;
+            border: 10px solid $accent-color;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 70px;
+            cursor: pointer;
+        }
+    }
+        .bs1,.bs2 {
+            width: 60rem;
+            position: relative;
+            z-index: 1;
+            margin-left: 16%;
+        }
+
+        #scene2, #scene3, #scene4 {
+        display: none;
+        }
+
+        .valg1 {
+           
+            position: absolute;
+            top: 290%; 
+            left: 25%;
+            z-index: 2;
+            cursor: pointer; 
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-family: $font-antonio;
+            font-size: 1.5625rem;
+            border-radius: 70px;
+            border-style: none;
+            background-color: $secondary-color;
+        }
+
+        .valg {
+            position: absolute;
+            top: 295%; 
+            left: 25%;
+            z-index: 2;
+            cursor: pointer; 
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-family: $font-antonio;
+            font-size: 1.5625rem;
+            border-radius: 70px;
+            border-style: none;
+            background-color: $secondary-color;
+        }
+
+        #rod {
+            color: $accent-color;
+        }
+
+        #sort {
+            color: $sort-color;
+        }
+
+        .knap2 {
+            position: absolute;
+            top: 297%; 
+            left: 47%;
+            z-index: 2;
+            color: $sort-color;
+            background-color: $secondary-color;
+            text-align: center;
+            font-family: $font-antonio;
+            font-size: 1rem;
+            width: 6rem;
+            height: 2rem;
+            border: 2px solid $accent-color;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 70px;
+            cursor: pointer;
+        }
+        
+
+        /* Ipad mini - vertical */
+
+        @media only screen and (max-width: 768px) {
+            .header_con {
+                padding: 5%;
+            }
+        
+            .logo img {
+                width: 80px; 
+                height: 80px;
+            }
+        
+            .nav_text {
+                font-size: 1.5rem; 
+            }
+        
+            .overskrift h1 {
+                font-size: 3rem; 
+            }
+        
+            .overskrift p {
+                font-size: 1.5rem; 
+            }
+        
+            .quiz_con {
+                width: 90%; 
+                max-width: 600px;
+                margin: 5% auto; 
+                padding: 8%; 
+            }
+        
+            .quiz h1 {
+                font-size: 1.5rem; 
+            }
+        
+            .question h2 {
+                font-size: 1rem; 
+            }
+        
+            .quiz #answer-button {
+                padding: 5%; 
+            }
+        
+            .btn {
+                font-size: 1rem; 
+            }
+        
+            #btn_next {
+                font-size: 1rem; 
+            }
+
+            .pil_con .pil {
+                width: 50px;
+            }
+
+            .footer-con .SM {
+                margin-left: 10%;
+            }
+
+            /* Side 2 */
+
+            .phishing h2 {
+                font-size: 3rem; 
+                margin-bottom: 2%;
+            }
+        
+            .phishing  p {
+                font-size: 1.5rem; 
+            }
+
+            .infografik {
+                margin-top: 5%;
+            
+                #infog {
+                    width: 30rem;
+                }
+            }
+
+            .bs_con {
+                margin-top: 5%;
+            
+                    .bs {
+                        width: 40rem;
+                    }
+            
+            
+               .knap {
+                        top: 169%; 
+                        left: 40%;
+                        font-size: 1rem;
+                        width: 9rem;
+                        height: 3rem;
+                    }
+                }
+
+                .bs1,.bs2 {
+                    width: 40rem;
+                    margin-left: 8%;
+                }
+
+                .valg1 {
+                    top: 168%; 
+                    left: 20%;
+                    font-size: 1rem;
+                }
+        
+                .valg {
+                    top: 170%; 
+                    left: 20%;
+                    font-size: 1rem;
+                }
+
+                .knap2 {
+                    top: 170%; 
+                    left: 45%;
+                    font-size: 1rem;
+                    width: 5rem;
+                    height: 1.8rem;
+                }
+        }
+
+        /* Ipone 12 pro - vertical */
+        @media only screen and (max-width: 390px) {
+            .overskrift h1 {
+                font-size: 2.5rem; 
+            }
+        
+            .overskrift p {
+                font-size: 1rem; 
+            }
+
+            .brev {
+                img { 
+                    width: 15rem;
+                    height: auto;
+                }
+            }
+
+            .intro {
+            
+                h2 {
+                    font-size: 1.5rem;
+                }
+            
+                p {
+                    font-size: 1rem;
+                }
+            }
+        
+            .quiz h1 {
+                font-size: 0.8rem; 
+            }
+        
+            .question h2 {
+                font-size: 0.8rem; 
+            }
+        
+
+            .pil_con .pil {
+                width: 30px;
+            }
+
+            .footer-con {
+                display: flex;
+                flex-direction: row;
+                padding: 20px;
+            
+                .kontakt {
+                    margin-left: 2%;
+            
+                    h3 {
+                        font-size: 1rem;
+                        margin-bottom: 3%;
+                    }
+            
+                    p {
+                        font-size: 0.8rem;
+                    }
+                }
+            
+                .SM {
+                    margin-left: 2%;
+
+            
+                    h3 {
+                        font-size: 1rem;
+                    }
+                }
+            
+                .besked {
+                    margin-left: 2%;
+                    h3 {
+                        font-size: 1rem;
+                        margin-bottom: 3%;
+
+                    }
+            
+                    textarea {
+                        height: 40px;
+                        resize: none;
+                    }
+                }
+            }
+
+            /* Side 2 */
+
+            .phishing h2 {
+                font-size: 3rem; 
+                margin-bottom: 2%;
+            }
+        
+            .phishing  p {
+                font-size: 1.5rem; 
+            }
+
+            .infografik {
+                margin-top: 5%;
+            
+                #infog {
+                    width: 30rem;
+                }
+            }
+
+            .bs_con {
+                margin-top: 5%;
+            
+                    .bs {
+                        width: 40rem;
+                    }
+            
+            
+               .knap {
+                        top: 169%; 
+                        left: 40%;
+                        font-size: 1rem;
+                        width: 9rem;
+                        height: 3rem;
+                    }
+                }
+
+                .bs1,.bs2 {
+                    width: 40rem;
+                    margin-left: 8%;
+                }
+
+                .valg1 {
+                    top: 168%; 
+                    left: 20%;
+                    font-size: 1rem;
+                }
+        
+                .valg {
+                    top: 170%; 
+                    left: 20%;
+                    font-size: 1rem;
+                }
+
+                .knap2 {
+                    top: 170%; 
+                    left: 45%;
+                    font-size: 1rem;
+                    width: 5rem;
+                    height: 1.8rem;
+                }
+
+
+        }
+
+
+
+        
+         
+  
+
+      
+
+  
 
 
